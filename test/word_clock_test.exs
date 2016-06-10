@@ -17,14 +17,14 @@ defmodule WordClockTest do
     assert WordClock.humanize({12, 00}) == "It is twelve o'clock"
   end
 
-  test "uses 'five past' when the minutes round to 5" do
-    assert WordClock.humanize({2, 5}) == "It is five past two"
-    assert WordClock.humanize({2, 6}) == "It is five past two"
+  test "uses 'five minutes past' when the minutes round to 5" do
+    assert WordClock.humanize({2, 5}) == "It is five minutes past two"
+    assert WordClock.humanize({2, 6}) == "It is five minutes past two"
   end
 
-  test "uses 'ten past' when the minutes round to 10" do
-    assert WordClock.humanize({2, 10}) == "It is ten past two"
-    assert WordClock.humanize({2, 11}) == "It is ten past two"
+  test "uses 'ten minutes past' when the minutes round to 10" do
+    assert WordClock.humanize({2, 10}) == "It is ten minutes past two"
+    assert WordClock.humanize({2, 11}) == "It is ten minutes past two"
   end
 
   test "uses 'quarter past' when the minutes round to 15" do
@@ -33,13 +33,13 @@ defmodule WordClockTest do
   end
 
   test "uses 'quarter past' when the minutes round to 20" do
-    assert WordClock.humanize({2, 20}) == "It is twenty past two"
-    assert WordClock.humanize({2, 19}) == "It is twenty past two"
+    assert WordClock.humanize({2, 20}) == "It is twenty minutes past two"
+    assert WordClock.humanize({2, 19}) == "It is twenty minutes past two"
   end
 
-  test "uses 'twenty five past' when the minutes round to 25" do
-    assert WordClock.humanize({2, 25}) == "It is twenty five past two"
-    assert WordClock.humanize({2, 26}) == "It is twenty five past two"
+  test "uses 'twenty five minutes past' when the minutes round to 25" do
+    assert WordClock.humanize({2, 25}) == "It is twenty five minutes past two"
+    assert WordClock.humanize({2, 26}) == "It is twenty five minutes past two"
   end
 
   test "uses 'half past' when the minutes round to 30" do
@@ -47,14 +47,14 @@ defmodule WordClockTest do
     assert WordClock.humanize({2, 29}) == "It is half past two"
   end
 
-  test "uses 'twenty five to' when the minutes round to 35" do
-    assert WordClock.humanize({2, 34}) == "It is twenty five to three"
-    assert WordClock.humanize({12, 34}) == "It is twenty five to one"
+  test "uses 'twenty five minutes to' when the minutes round to 35" do
+    assert WordClock.humanize({2, 34}) == "It is twenty five minutes to three"
+    assert WordClock.humanize({12, 34}) == "It is twenty five minutes to one"
   end
 
-  test "uses 'twenty to' when the minutes round to 40" do
-    assert WordClock.humanize({2, 41}) == "It is twenty to three"
-    assert WordClock.humanize({12, 41}) == "It is twenty to one"
+  test "uses 'twenty minutes to' when the minutes round to 40" do
+    assert WordClock.humanize({2, 41}) == "It is twenty minutes to three"
+    assert WordClock.humanize({12, 41}) == "It is twenty minutes to one"
   end
 
   test "uses 'quarter to' when the minutes round to 45" do
@@ -62,18 +62,18 @@ defmodule WordClockTest do
     assert WordClock.humanize({12, 45}) == "It is quarter to one"
   end
 
-  test "uses 'ten to' when the minutes round to 50" do
-    assert WordClock.humanize({2, 51}) == "It is ten to three"
-    assert WordClock.humanize({12, 50}) == "It is ten to one"
+  test "uses 'ten minutes to' when the minutes round to 50" do
+    assert WordClock.humanize({2, 51}) == "It is ten minutes to three"
+    assert WordClock.humanize({12, 50}) == "It is ten minutes to one"
   end
 
-  test "uses 'ten to' when the minutes round to 50" do
-    assert WordClock.humanize({2, 51}) == "It is ten to three"
-    assert WordClock.humanize({12, 50}) == "It is ten to one"
+  test "uses 'ten minutes to' when the minutes round to 50" do
+    assert WordClock.humanize({2, 51}) == "It is ten minutes to three"
+    assert WordClock.humanize({12, 50}) == "It is ten minutes to one"
   end
 
-  test "uses 'five to' when the minutes round to 55" do
-    assert WordClock.humanize({2, 56}) == "It is five to three"
-    assert WordClock.humanize({12, 55}) == "It is five to one"
+  test "uses 'five minutes to' when the minutes round to 55" do
+    assert WordClock.humanize({2, 56}) == "It is five minutes to three"
+    assert WordClock.humanize({12, 55}) == "It is five minutes to one"
   end
 end
