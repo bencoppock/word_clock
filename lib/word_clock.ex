@@ -1,0 +1,2 @@
+defmodule WordClock do
+end
